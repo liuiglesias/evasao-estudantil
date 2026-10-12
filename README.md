@@ -45,7 +45,40 @@ A validação cruzada estratificada utiliza cinco divisões somente no conjunto 
 
 O código calcula acurácia, precisão, recall de desistência, F1-score, ROC-AUC e matriz de confusão no teste. Também compara ROC-AUC de treinamento, validação e teste para investigar overfitting e underfitting.
 
-Os resultados numéricos da execução serão registrados nesta documentação antes da entrega.
+### Resultados no teste reservado
+
+O conjunto de teste contém 726 estudantes. As métricas foram conferidas carregando o pipeline salvo, sem retreinamento, e reproduziram os resultados da avaliação original.
+
+| Métrica | Resultado |
+|---|---:|
+| Acurácia | 0,9215 |
+| Precisão de desistência | 0,9127 |
+| Recall de desistência | 0,8838 |
+| F1-score de desistência | 0,8980 |
+| ROC-AUC | 0,9627 |
+
+### Matriz de confusão
+
+| Classe real | Previsto Graduado | Previsto Desistente |
+|---|---:|---:|
+| Graduado | 418 | 24 |
+| Desistente | 33 | 251 |
+
+O modelo identificou 251 dos 284 desistentes do teste, correspondendo a recall de 88,38%. Deixou de identificar 33 desistentes e classificou 24 graduados como desistentes.
+
+### Validação cruzada e capacidade de generalização
+
+A validação cruzada estratificada em cinco divisões, realizada somente no treinamento, apresentou ROC-AUC médio de 0,9518 e desvio-padrão de 0,0095.
+
+| Conjunto | ROC-AUC |
+|---|---:|
+| Treinamento | 0,9593 |
+| Validação cruzada — média | 0,9518 |
+| Teste reservado | 0,9627 |
+
+A proximidade dos resultados não indica overfitting acentuado nesta avaliação. O desempenho elevado nos três conjuntos também não sugere underfitting acentuado. Essas observações não garantem generalização para outras instituições ou períodos.
+
+A conferência do modelo salvo reproduziu o teste original; não constitui uma avaliação independente em novos dados.
 
 Métricas calculadas sobre o CSV completo de previsões incluem registros usados no treinamento e não substituem a avaliação no teste reservado.
 
