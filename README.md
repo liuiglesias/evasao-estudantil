@@ -24,8 +24,6 @@ A variável-alvo foi codificada como:
 
 Foram criadas taxas de aprovação por semestre, calculadas pela divisão entre disciplinas aprovadas e disciplinas inscritas. Quando o denominador é zero, a taxa fica ausente e recebe tratamento no pipeline.
 
-O tratamento de notas com valores inconsistentes envolveu uma hipótese de recuperação do separador decimal. Essa correção inferida é uma limitação da preparação dos dados e deve ser considerada na interpretação dos resultados.
-
 ## Modelo e pipeline
 
 Foi utilizada Regressão Logística, com:

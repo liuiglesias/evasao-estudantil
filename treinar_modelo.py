@@ -150,7 +150,7 @@ print("Acurácia:", round(accuracy_score(y_teste, previsoes), 4)) #Qual percentu
 
 print("Precisão:", round(precision_score(y_teste, previsoes), 4)) #Dos estudantes previstos como desistentes, quantos realmente desistiram?
 
-print("Recall:", round(recall_score(y_teste, previsoes), 4)) #Dos estudantes que realmente desistiram, quantos foram identificados? (+importante)
+print("Recall:", round(recall_score(y_teste, previsoes), 4)) #Dos estudantes que realmente desistiram, quantos foram identificados?
 
 print("F1-score:", round(f1_score(y_teste, previsoes), 4)) #Qual o equilíbrio entre precisão e recall?
 
