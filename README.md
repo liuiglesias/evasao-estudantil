@@ -133,6 +133,10 @@ O limiar de classificação é 0,5. As probabilidades são estimativas do modelo
 - Correção inferida de valores inconsistentes nas notas.
 - Necessidade de validação em outras instituições e períodos antes de generalizar os resultados.
 
-## Entrega
+## Links Entregáveis
 
-Os links do repositório, da aplicação publicada e do vídeo de apresentação serão reunidos em um arquivo `.txt`.
+Repositório GitHub:
+https://github.com/liuiglesias/evasao-estudantil
+
+Aplicação Streamlit:
+https://liuiglesias-evasao-estudantil-app-7qkke9.streamlit.app/
