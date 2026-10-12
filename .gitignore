@@ -1,0 +1,15 @@
+# ambiente virtual
+.venv/
+
+# arquivos temporários do Python e macOS
+__pycache__/
+*.pyc
+.DS_Store
+
+# dados e resultados locais
+data/
+previsoes_evasao*.csv
+
+# credenciais
+.env
+.streamlit/secrets.toml
