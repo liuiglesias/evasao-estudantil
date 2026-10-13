@@ -139,7 +139,7 @@ O limiar de classificação é 0,5. As probabilidades são estimativas do modelo
 
 Ao clicar em **Realizar previsões**, a aplicação compara as colunas do CSV com as entradas esperadas pelo modelo. Se faltar alguma coluna, exibe uma mensagem e a lista de colunas ausentes, sem executar as previsões. Essa verificação não garante a validade dos tipos e das faixas de todos os valores.
 
-Para demonstrar esse comportamento, utilize uma cópia do CSV tratado sem `TaxaAprovacao1Semestre`, preservando o original. Envie a cópia e clique em **Realizar previsões**; a saída esperada é a indicação da coluna ausente. Esse é um procedimento de teste proposto, não um resultado de execução já confirmado.
+Para demonstrar esse comportamento, utilize uma cópia do CSV tratado sem `TaxaAprovacao1Semestre`, preservando o original. Envie a cópia e clique em **Realizar previsões**; a saída esperada é a indicação da coluna ausente. Teste realizado na aplicação publicada: um CSV com cinco registros, sem a coluna TaxaAprovacao1Semestre, apresentou a mensagem de variáveis necessárias ausentes e identificou a coluna faltante, sem executar as previsões.
 
 ## Limitações
 
