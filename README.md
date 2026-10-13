@@ -24,6 +24,8 @@ A variável-alvo foi codificada como:
 
 Foram criadas taxas de aprovação por semestre, calculadas pela divisão entre disciplinas aprovadas e disciplinas inscritas. Quando o denominador é zero, a taxa fica ausente e recebe tratamento no pipeline.
 
+Notas fora da escala de 0 a 20 foram marcadas como ausentes durante a preparação dos dados. Esses valores são imputados pela mediana dentro do pipeline. A mediana é calculada somente nos dados usados para ajustar o pipeline, inclusive em cada divisão da validação cruzada. Não foi realizada recuperação do separador decimal.
+
 ## Modelo e pipeline
 
 Foi utilizada Regressão Logística, com:
@@ -128,7 +130,7 @@ O limiar de classificação é 0,5. As probabilidades são estimativas do modelo
 - Uso de informações dos dois primeiros semestres.
 - Exclusão da classe Matriculado.
 - Presença de valores ausentes, tratados pelo pipeline.
-- Correção inferida de valores inconsistentes nas notas.
+- Notas fora da escala de 0 a 20 foram tratadas como ausentes. A imputação pela mediana não recupera as notas originais e pode afetar os resultados.
 - Necessidade de validação em outras instituições e períodos antes de generalizar os resultados.
 
 ## Links Entregáveis
